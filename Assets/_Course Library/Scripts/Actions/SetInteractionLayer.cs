@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class SetInteractionLayer : MonoBehaviour
 {
     [Tooltip("The layer that's switched to")]
-    public LayerMask targetLayer = 0;
+    public InteractionLayerMask targetLayer = 0;
 
     private XRBaseInteractor interactor = null;
     private LayerMask originalLayer = 0;
@@ -20,7 +20,7 @@ public class SetInteractionLayer : MonoBehaviour
 
     public void SetTargetLayer()
     {
-        interactor.interactionLayerMask = targetLayer;
+        interactor.interactionLayers = targetLayer;
     }
 
     public void SetOriginalLayer()
